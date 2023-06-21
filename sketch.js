@@ -27,18 +27,17 @@ function setup() {
   };
  
   var ball_options = {
-    // restitution: 0.2,
-    // restitution: 1,
-    // restitution: -0.8,
-    // restitution: 0.75,
+    //write a code to set value of restitution such that:
+   //Ball (white circle) bounces more when it hits the bottom.
+   restitution: 0.95,
+    frictionAir:0.01
   }
 
   var rock_options = {
-    // restitution: 0.2,
-    // restitution: 1,
-    // restitution: -0.8,
-    // restitution: 0.75,
-
+   // write a code to set value of restitution such that:
+   // Rock (Red Circle) bounces less when it hits the bottom.
+   restitution: 0,
+    frictionAir:0.001
   }
    
   btn2 = createImg('up.png');
@@ -78,16 +77,10 @@ pop();
 
 function vForce()
 {
-  // Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:-0.05});
-
-  // Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:0});
-
-  // Matter.Body.applyForce(ball,{x:0,y:0},{x:0.5,y:0});
-
-  // Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:0.05});
+ //write a code to move ball up when the button is clicked.
+ Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:-0.05});
 }
 
 
-  
 
 
